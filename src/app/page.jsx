@@ -273,7 +273,7 @@ export default async function Home() {
             Developer, Designer, Photographer, Network & Systems Admin.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I'm Carlos—a Developer, Designer, Photographer, and Network & Systems Administrator based in Winnipeg.
+          I&apos;m Carlos—a Developer, Designer, Photographer, and Network & Systems Administrator based in Winnipeg.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           I specialize in building dynamic and efficient digital solutions, seamlessly blending development, 

@@ -37,10 +37,10 @@ export default function Uses() {
       <div className="space-y-20">
         <ToolsSection title="Workstation">
           <Tool title="15” ROG Strix G513">
-            I'm using an AMD-based 15” ROG Strix G513 Gaming Laptop for programming, and photo and video post production.
+            I&apos;m using an AMD-based 15” ROG Strix G513 Gaming Laptop for programming, and photo and video post production.
           </Tool>
           <Tool title="AMD Ryzen 6800H with Radeon Graphics">
-          The AMD Ryzen 7 6800H is a high-performance 8-core, 16-thread mobile processor designed for gaming laptops, content creation, and productivity. Built on AMD's Zen 3+ architecture and 6nm process technology, it delivers excellent efficiency and performance.
+          The AMD Ryzen 7 6800H is a high-performance 8-core, 16-thread mobile processor designed for gaming laptops, content creation, and productivity. Built on AMD&apos;s Zen 3+ architecture and 6nm process technology, it delivers excellent efficiency and performance.
           </Tool>
           <Tool title="NVIDIA GeForce RTX3070 Ti Laptop GPU GDDR6 @ 8GB (256 bits)">
           a high-performance mobile graphics card based on the Ampere architecture, designed for gaming, content creation, and AI-powered workloads. It delivers excellent performance in 1440p and 1080p gaming, ray tracing, and GPU-accelerated tasks.
@@ -53,7 +53,7 @@ export default function Uses() {
         </ToolsSection>
         <ToolsSection title="Design">
           <Tool title="Figma">
-          a cloud-based design and prototyping tool used primarily for UI/UX design. It's widely popular among web and app designers for its real-time collaboration features and intuitive interface. Unlike traditional design software, Figma operates entirely in the browser (though desktop apps are also available), making it ideal for teams working in distributed or remote environments.
+          a cloud-based design and prototyping tool used primarily for UI/UX design. It&apos;s widely popular among web and app designers for its real-time collaboration features and intuitive interface. Unlike traditional design software, Figma operates entirely in the browser (though desktop apps are also available), making it ideal for teams working in distributed or remote environments.
           </Tool>
           <Tool title="Adobe Photoshop">
           the industry-leading raster graphics editor developed by Adobe Inc. It is widely used for photo editing, digital painting, graphic design, and compositing. With a vast range of powerful tools, Photoshop is essential for professionals and hobbyists in photography, web design, branding, and digital art.
