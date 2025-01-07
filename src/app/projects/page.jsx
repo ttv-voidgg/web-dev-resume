@@ -64,7 +64,7 @@ I've worked on numerous projects over the years, but these are the ones I'm most
                 Zumi
               </h1>
               <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
-                A free, user-friendly app that connects pet parents with trusted and qualified Registered Veterinary Nurses (RVNs) for in-home pet care services. Ensuring your pet's needs are met in the comfort of their own home.
+                A free, user-friendly app that connects pet parents with trusted and qualified Registered Veterinary Nurses (RVNs) for in-home pet care services. Ensuring your pet&apos;s needs are met in the comfort of their own home.
               </p>
             </div>
           </div>
