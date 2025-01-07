@@ -171,7 +171,7 @@ function Resume() {
   let resume = [
     {
       company: 'Constant C',
-      title: 'Network & System Admin Intern',
+      title: 'Network & System Ad Intern',
       logo: logoPlanetaria,
       start: 'Aug 24',
       end: {
@@ -181,21 +181,21 @@ function Resume() {
     },
     {
       company: 'Chykalophia',
-      title: 'Operations and Project Manager',
+      title: 'Ops and Project Manager',
       logo: logoAirbnb,
       start: 'Jan 23',
       end: 'Aug 24',
     },
     {
       company: 'Webriver',
-      title: 'Senior Web Developer / QA',
+      title: 'Senior Web Dev / QA',
       logo: logoFacebook,
       start: '2014',
       end: 'Jan 23',
     },
     {
       company: 'Wideout Workforces',
-      title: 'Senior Web Developer',
+      title: 'Senior Web Dev',
       logo: logoStarbucks,
       start: '2013',
       end: '2014',
