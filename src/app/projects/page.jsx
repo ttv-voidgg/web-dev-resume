@@ -1,50 +1,10 @@
 import Image from 'next/image'
-
+import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-
-const projects = [
-  {
-    name: 'Planetaria',
-    description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'Animaginary',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
-  },
-  {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
-  },
-]
+import zumi from '@/images/projects/zumi.jpg'
+import zpercent from '@/images/projects/zpercent.png'
+import allcooks from '@/images/projects/allcooks-logo.png'
 
 function LinkIcon(props) {
   return (
@@ -59,40 +19,108 @@ function LinkIcon(props) {
 
 export const metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Projects I&apos;ve created in my attempt to make an impact on the world.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Projects I&apos;ve created in my attempt to make an impact on the world."
+      intro="
+I've worked on numerous projects over the years, but these are the ones I'm most proud of. Many are open-source, so if something catches your eye, feel free to explore the code and contribute any ideas for improvement!"
     >
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        {projects.map((project) => (
-          <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={project.logo}
-                alt=""
-                className="h-8 w-8"
-                unoptimized
-              />
+
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <svg
+          aria-hidden="true"
+          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+        >
+          <defs>
+            <pattern
+              x="50%"
+              y={-1}
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width={200}
+              height={200}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              strokeWidth={0}
+            />
+          </svg>
+          <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={0} />
+        </svg>
+      </div>
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="lg:pr-4">
+            <div className="lg:max-w-lg">
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                Zumi
+              </h1>
+              <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
+                A free, user-friendly app that connects pet parents with trusted and qualified Registered Veterinary Nurses (RVNs) for in-home pet care services. Ensuring your pet's needs are met in the comfort of their own home.
+              </p>
             </div>
-            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href}>{project.name}</Card.Link>
-            </h2>
-            <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.link.label}</span>
-            </p>
-          </Card>
-        ))}
-      </ul>
-    </SimpleLayout>
+          </div>
+        </div>
+        <div className="sm:hidden lg:col-span-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-1 lg:gap-x-8 lg:px-8">
+          <Image
+            alt=""
+            src={zumi}
+            className="w-[55rem] max-w-52 rounded-xl sm:w-[57rem]"
+          />
+        </div>
+      </div>  
+
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="lg:pr-4">
+            <div className="lg:max-w-lg">
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                Zpercent
+              </h1>
+              <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
+              Helping organizations alleviate employee financial stress by offering interest-free emergency funds through a unique subscription model, improving morale, retention, productivity, and profitability.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="sm:hidden lg:col-span-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-1 lg:gap-x-8 lg:px-8">
+          <Image
+            alt=""
+            src={zpercent}
+            className="w-[55rem] max-w-80 rounded-xl sm:w-[57rem]"
+          />
+        </div>
+      </div>
+
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="lg:pr-4">
+            <div className="lg:max-w-lg">
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                AllCooks
+              </h1>
+              <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
+              Allcooks is built on community and fueled by a love for food. Together, we explore comforting dishes, uncover cherished family recipes passed down through generations, and celebrate the culinary traditions that shape our identities.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="sm:hidden lg:col-span-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-1 lg:gap-x-8 lg:px-8">
+          <Image
+            alt=""
+            src={allcooks}
+            className="w-[55rem] max-w-60 rounded-xl sm:w-[57rem]"
+          />
+        </div>
+      </div>
+    </SimpleLayout>    
   )
 }
