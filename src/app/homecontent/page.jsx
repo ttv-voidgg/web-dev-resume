@@ -4,13 +4,28 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 
-import { SimpleLayout } from '@/components/SimpleLayout';
+import Link from 'next/link'
+
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  XIcon,
+} from '@/components/SocialIcons'
 
 import '@/styles/studies.css';
 
 gsap.registerPlugin(TextPlugin);
 
-const App = () => {
+const HomeContent = () => {
+
+  function SocialLink({ icon: Icon, ...props }) {
+    return (
+      <Link className="group -m-1 p-1" {...props}>
+        <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      </Link>
+    )
+  }
 
   useEffect(() => {
     const roles = document.getElementById("roles");
@@ -19,11 +34,11 @@ const App = () => {
 
     // Define the words you want to animate
     const textArray = [
+      "{ Self Taught ^^ }",
       "{ Web Designer }",
       "{ Web Developer }",
       "{ Photographer }",
       "{ Network and Sys Admin }",
-      "{ I'm kicka$$, ./.} ",
     ];
 
     // Define the Tailwind background gradient classes for each text
@@ -99,21 +114,35 @@ const App = () => {
   }, []);
 
   return (
-    <SimpleLayout
-      title="Self studies that I'm currently pursuing during my free time"
-      intro="Throughout my career life, my success is based on trust from the people who worked with me and my passion for my craft. I believe that one doesn't really need to know everything in the beginning as long as they are eager to learn."
-    >
-      <div>
-        <h2 className='text-5xl'>GSAP</h2>
-        <p className='text-lg mb-8'>March 17, 2025. I’ve always been interested in developing complex website designs that only a few developers have engaged with, but while searching for a company who’s gonna hire me, I guess it’s the best time to learn all these things.</p>
-        <div  style={{backgroundImage: 'linear-gradient(to right, #3B82F6, #9333EA)',}} className="p-10 h-40 mb-8" id="bgtest">
-          <span className='text-7xl mb-8' id="roles"></span><span id="cursor" className="text-7xl font-mono">|</span>
-          
-        </div>
-        <p className='text-lg mb-8'>I’ll most likely combine the snippets that I’ll be able to create to produce that coola$$ website. For now, I’ve started learning how to use GSAP’s TextPlugin plugin which I’ll probably combine with Flip add smooth transitions with. On a side note... I hate it when react explicitly wants ’ instead of &#39;</p>
-      </div>
-    </SimpleLayout>   
+            <div className="max-w-full">
+              <span className='text-7xl mb-8' id="roles"></span><span id="cursor" className="text-7xl font-mono">|</span>
+              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+              I&apos;m Carlos—a Developer, Designer, Photographer, and Network & Systems Administrator based in Winnipeg.
+              </p>
+              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+              I specialize in building dynamic and efficient digital solutions, seamlessly blending development, 
+              design, and technology to craft exceptional user experiences. Photography is also a passion of mine, 
+              where I explore creativity beyond the digital realm, having received recognition for some of my work.
+              </p>          
+              <div className="mt-6 flex gap-6">
+                <SocialLink
+                  href="https://www.instagram.com/kai._.0008/"
+                  aria-label="Check my Photography on Instagram"
+                  icon={InstagramIcon}
+                />
+                <SocialLink
+                  href="https://github.com/ttv-voidgg"
+                  aria-label="View My Silly Projects on GitHub"
+                  icon={GitHubIcon}
+                />
+                <SocialLink
+                  href="https://www.linkedin.com/in/juan-carlos-eejay-de-borja-80696651/"
+                  aria-label="Connect with me on LinkedIn"
+                  icon={LinkedInIcon}
+                />
+              </div>
+            </div> 
   );
 };
 
-export default App;
+export default HomeContent;
