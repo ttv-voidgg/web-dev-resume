@@ -1,8 +1,10 @@
 'use client';  // This marks the component as a Client Component
 
-import { useEffect } from 'react';
 import gsap from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
+
+gsap.registerPlugin(TextPlugin); 
+import { useEffect } from 'react';
 
 import Link from 'next/link'
 
@@ -15,7 +17,7 @@ import {
 
 import '@/styles/studies.css';
 
-gsap.registerPlugin(TextPlugin);
+
 
 const HomeContent = () => {
 
@@ -29,7 +31,6 @@ const HomeContent = () => {
 
   useEffect(() => {
     const roles = document.getElementById("roles");
-    const bgtest = document.getElementById("bgtest");
     const cursor = document.getElementById("cursor");  // The cursor element
 
     // Define the words you want to animate
@@ -71,12 +72,10 @@ const HomeContent = () => {
         duration: 0,     // Instant change of text
         opacity: 1, 
         text: { value: "" }, // Change the text immediately
-        delimiter:""
       })    
       .to(roles, {
         duration: 1,  // Adjust typing speed based on text length 
         text: { value: text }, // Change the text immediately
-        delimiter:""
       })       
       .to(roles, {
         duration: .5,     // Fade in duration for new text
@@ -86,29 +85,10 @@ const HomeContent = () => {
       .to(roles, {
         duration: 3,     // Fade out duration for current text
         opacity: 1,      // Hide the current text
-        ease: "power1.inOut"
+        ease: "power1.inOut",
       })
     });
-
-    bgClasses.forEach((text, index) => {
-      tbg.to(bgtest, {
-        duration: 1,     // Animate background gradient
-        backgroundImage: bgClasses[index],  // Set the new background color using CSS color value
-        ease: "power1.inOut"
-      })
-      .to(bgtest, {
-        duration: 5.5,     // Animate background gradient
-        ease: "power1.inOut"
-      })      
-    }); 
-    
-    // At the end of the timeline, smoothly transition back to the first background.
-    tbg.to(bgtest, {
-      duration: .5,  // Transition back to the first background image
-      backgroundImage: bgClasses[0],  // Set the background back to the first gradient
-      ease: "power1.inOut"
-    });   
-
+  
  
 
   }, []);
