@@ -84,7 +84,7 @@ const HomeContent = () => {
         ease: "power1.inOut",
       })
       .to(roles, {
-        duration: 5,     // Fade out duration for current text
+        duration: 3,     // Fade out duration for current text
         opacity: 1,      // Hide the current text
         ease: "power1.inOut"
       })
