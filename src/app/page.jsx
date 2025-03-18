@@ -25,6 +25,12 @@ import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
+import { gsap } from "gsap";
+import { Flip } from "gsap/Flip";
+
+
+gsap.registerPlugin(Flip);
+
 function MailIcon(props) {
   return (
     <svg
