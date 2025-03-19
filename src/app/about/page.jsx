@@ -62,7 +62,7 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and revese engineered a 
+              I’ve loved making things for as long as I can remember. I revese engineered a 
               Nintendo Entertainment System at 7 years old, just two weeks after my
               mom bought it from a local computer store that I thought myself how to disassemble and put it back together.
             </p>
@@ -83,10 +83,10 @@ export default function About() {
               Follow on Instagram
             </SocialLink>
             <SocialLink href="https://www.linkedin.com/in/juan-carlos-eejay-de-borja-80696651/" icon={LinkedInIcon} className="mt-4">
-              Follow on LinkedIn
+              Connect via LinkedIn
             </SocialLink>
             <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-              Follow on GitHub
+              An almost empty repo 🤣
             </SocialLink>            
             <SocialLink
               href="mailto:dev.eejay.me@gmail.com"

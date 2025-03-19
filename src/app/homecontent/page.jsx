@@ -16,8 +16,10 @@ import {
 } from '@/components/SocialIcons'
 
 import '@/styles/studies.css';
+import '@/styles/prism.css'
 
-
+import 'prismjs'; // Core PrismJS
+import 'prismjs/components/prism-javascript'; // For JS highlighting
 
 const HomeContent = () => {
 
@@ -35,26 +37,14 @@ const HomeContent = () => {
 
     // Define the words you want to animate
     const textArray = [
-      "{ Self Taught ^^ }",
-      "{ Web Designer }",
-      "{ Web Developer }",
-      "{ Photographer }",
-      "{ Network and Sys Admin }",
-    ];
-
-    // Define the Tailwind background gradient classes for each text
-    const bgClasses = [
-      "linear-gradient(to right, #3B82F6, #9333EA)",  // Web Designer (blue to purple)
-      "linear-gradient(to right, #10B981, #3B82F6)",  // Web Developer (green to blue)
-      "linear-gradient(to right, #8B5CF6, #F43F5E)",  // Photographer (purple to pink)
-      "linear-gradient(to right, #EF4444, #F59E0B)",  // Network and Systems Administrator (red to yellow)
-      "linear-gradient(to right, #10B981, #3B82F6)",  // I'm kicka$$, ./. (green to blue)
+      "{ webDeveloper }",
+      "{ webDesigner }",
+      "{ networkAndSysAdmin }",
     ];
 
     // Create a timeline with GSAP
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
     const tl2 = gsap.timeline({ repeat: -1, repeatDelay: 0 });
-    const tbg = gsap.timeline({ repeat: -1, repeatDelay: 0 });
 
     tl2.to(cursor, {
       duration: 0.5,
@@ -93,34 +83,94 @@ const HomeContent = () => {
 
   }, []);
 
+    const codeString = `
+  1    class AboutMe extends React.Component {
+  2        constructor(props) {
+  3            super(props);
+  4            this.state = {
+  5                name: 'Carlos',
+  6                roles: [
+  7                    'Developer',
+  8                    'Designer',
+  9                    'Network & Systems Administrator',
+  10               ],
+  11               city: 'Winnipeg',
+  12               province: 'MB',
+  13               hobbies: [
+  14                   'Photography and Filmography',
+  15                   'Digital and Traditional Arts',
+  16                   'Snowboarding',
+  17               ]
+  18           };
+  19       }
+  20  }
+  `;
+
   return (
             <div className="max-w-full">
-              <span className='text-7xl mb-8' id="roles"></span><span id="cursor" className="text-7xl font-mono">|</span>
-              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              I&apos;m Carlos—a Developer, Designer, Photographer, and Network & Systems Administrator based in Winnipeg.
-              </p>
-              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              I specialize in building dynamic and efficient digital solutions, seamlessly blending development, 
-              design, and technology to craft exceptional user experiences. Photography is also a passion of mine, 
-              where I explore creativity beyond the digital realm, having received recognition for some of my work.
-              </p>          
-              <div className="mt-6 flex gap-6">
-                <SocialLink
-                  href="https://www.instagram.com/kai._.0008/"
-                  aria-label="Check my Photography on Instagram"
-                  icon={InstagramIcon}
-                />
-                <SocialLink
-                  href="https://github.com/ttv-voidgg"
-                  aria-label="View My Silly Projects on GitHub"
-                  icon={GitHubIcon}
-                />
-                <SocialLink
-                  href="https://www.linkedin.com/in/juan-carlos-eejay-de-borja-80696651/"
-                  aria-label="Connect with me on LinkedIn"
-                  icon={LinkedInIcon}
-                />
+
+              <h1 className="font-bold font-mono tracking-tight text-zinc-800 sm:text-5xl lg:text-7xl dark:text-zinc-100 mb-8">
+                <span className='text-pink-600'>Carlos</span>
+                <span className='text-gray-500'>( </span>
+                <span className='text-cyan-300'>de_Borja</span>
+                <span className='text-gray-500'> ) </span>
+              </h1>
+              <div className='mb-8 font-mono text-2xl md:text-7xl'>
+                <span className='mb-8' id="roles"></span><span id="cursor">|</span>
               </div>
+              
+              <div className="flex flex-col md:flex-row">
+                <div className="w-full md:basis-1/3 mx-auto sm:mx-0 mb-5">
+                  <div className="rounded-tl-xl bg-gray-900 ring-1 ring-white/10">
+                    <div className="flex rounded-tl-xl bg-gray-800/40 ring-1 ring-white/5">
+                      <div className="text-md font-normal font-sans -mb-px flex text-sm/6 text-gray-400">
+                        <div className="rounded-tl-xl border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
+                          Dev Mode
+
+                        </div>
+                        <div className="border-r border-gray-600/10 px-4 py-2">AboutMe.jsx</div>
+                      </div>
+                    </div>
+
+                    <pre className="language-javascript px-5 pt-1 pb-10 text-white rounded-lg overflow-auto">
+                      <code>{codeString}</code>
+                    </pre>                  
+                  </div>
+                </div>
+
+                <div className='w-full md:basis-2/3 italic p-5 md:p-16 text-xl'>
+                    <p className="mb-8">I'm Carlos — a Developer, Designer, and Network & Systems Administrator based in Winnipeg, MB.</p>
+                    
+                    <p className="mb-8">I create clean looking fast websites by combining my skill in development, design, and technology to deliver exceptional user experiences.</p>
+
+                    <p className="mb-8">Outside the professional world, I love doing photography, digital and traditional arts, hiking, and snowboarding.</p>
+
+                    <div className="mt-6 flex gap-6">
+                      <SocialLink
+                        href="https://www.instagram.com/kai._.0008/"
+                        aria-label="Check my Photography on Instagram"
+                        icon={InstagramIcon}
+                        target="_blank"
+                      />
+                      <SocialLink
+                        href="https://github.com/ttv-voidgg"
+                        aria-label="View My Silly Projects on GitHub"
+                        icon={GitHubIcon}
+                        target="_blank"
+                      />
+                      <SocialLink
+                        href="https://www.linkedin.com/in/juan-carlos-eejay-de-borja-80696651/"
+                        aria-label="Connect with me on LinkedIn"
+                        icon={LinkedInIcon}
+                        target="_blank"
+                      />
+                    </div>                    
+                </div>
+              </div>
+     
+              
+                     
+
             </div> 
   );
 };

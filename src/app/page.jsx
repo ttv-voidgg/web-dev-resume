@@ -257,7 +257,7 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-      <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-1">
+      <div className="mx-auto grid max-w-xl grid-cols-1 lg:max-w-none lg:grid-cols-1">
           <div className="flex flex-col gap-16">
             <HomeContent />
           </div>
