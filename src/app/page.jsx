@@ -109,7 +109,7 @@ function Newsletter() {
       Connect with me for job opportunities or work-related inquiries. I’m always open to new roles and collaborations, and you can reach out anytime.
       </p>
       <div className="mt-6 flex">
-      <a href="tel:+12048692714">
+      <a href="tel:+14312757015">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 mr-2 inline-block" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
         +1 (431) 275 - 7015
       </a>
