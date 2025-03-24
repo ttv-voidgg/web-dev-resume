@@ -105,12 +105,12 @@ const App = () => {
     >
       <div>
         <h2 className='text-5xl'>GSAP</h2>
-        <p className='text-lg mb-8'>March 17, 2025. I’ve always been interested in developing complex website designs that only a few developers have engaged with, but while searching for a company who’s gonna hire me, I guess it’s the best time to learn all these things.</p>
+        <p className='text-lg mb-8'>March 17, 2025. I've always been interested in developing complex website designs that only a few developers have engaged with, but while searching for a company who's gonna hire me, I guess it's the best time to learn all these things.</p>
         <div  style={{backgroundImage: 'linear-gradient(to right, #3B82F6, #9333EA)',}} className="p-10 h-40 mb-8" id="bgtest">
           <span className='text-7xl mb-8' id="roles"></span><span id="cursor" className="text-7xl font-mono">|</span>
           
         </div>
-        <p className='text-lg mb-8'>I’ll most likely combine the snippets that I’ll be able to create to produce that coola$$ website. For now, I’ve started learning how to use GSAP’s TextPlugin plugin which I’ll probably combine with Flip add smooth transitions with. On a side note... I hate it when react explicitly wants ’ instead of &#39;</p>
+        <p className='text-lg mb-8'>I'll most likely combine the snippets that I'll be able to create to produce that coola$$ website. For now, I've started learning how to use GSAP's TextPlugin plugin which I'll probably combine with Flip add smooth transitions with.</p>
       </div>
     </SimpleLayout>   
   );
