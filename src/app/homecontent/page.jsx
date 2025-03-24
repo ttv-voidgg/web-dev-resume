@@ -139,7 +139,7 @@ const HomeContent = () => {
                 </div>
 
                 <div className='w-full md:basis-2/3 italic p-5 md:p-16 text-xl'>
-                    <p className="mb-8">I’m Carlos — a Developer, Designer, and Network & Systems Administrator based in Winnipeg, MB.</p>
+                    <p className="mb-8">I'm Carlos — a Developer, Designer, and Network & Systems Administrator based in Winnipeg, MB.</p>
                     
                     <p className="mb-8">I create clean looking fast websites by combining my skill in development, design, and technology to deliver exceptional user experiences.</p>
 
