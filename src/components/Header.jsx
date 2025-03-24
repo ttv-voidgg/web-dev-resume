@@ -115,7 +115,7 @@ function MobileNavigation(props) {
           <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
             <MobileNavItem href="/about">About</MobileNavItem>
             <MobileNavItem href="/articles">Posts</MobileNavItem>
-             {/* <MobileNavItem href="/projects">Projects</MobileNavItem> */}
+             <MobileNavItem href="/projects">Projects</MobileNavItem>
              <MobileNavItem href="/studies">Studies</MobileNavItem>
             {/*<MobileNavItem href="/speaking">Speaking</MobileNavItem> */}
             <MobileNavItem href="/uses">Tools</MobileNavItem>
@@ -155,7 +155,7 @@ function DesktopNavigation(props) {
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Posts</NavItem>
-        {/* <NavItem href="/projects">Projects</NavItem> */}
+        <NavItem href="/projects">Projects</NavItem>
         <NavItem href="/studies">Studies</NavItem>
         {/* <NavItem href="/speaking">Speaking</NavItem> */}
         <NavItem href="/uses">Tools</NavItem>
@@ -177,7 +177,7 @@ function ThemeToggle() {
     <button
       type="button"
       aria-label={mounted ? `Switch to ${otherTheme} theme` : 'Toggle theme'}
-      className="m-0 group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
       <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
@@ -373,9 +373,7 @@ export function Header() {
                     className="block h-16 w-16 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
                   />
-
                 </div>
-                
               </div>
             </Container>
           </>

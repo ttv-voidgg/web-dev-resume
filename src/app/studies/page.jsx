@@ -19,10 +19,11 @@ const App = () => {
 
     // Define the words you want to animate
     const textArray = [
-      "{ webDesigner }",
-      "{ webDeveloper }",
-      "{ photographer }",
-      "{ networkAndSysAdmin }",
+      "{ Web Designer }",
+      "{ Web Developer }",
+      "{ Photographer }",
+      "{ Network and Sys Admin }",
+      "{ I'm kicka$$, ./.} ",
     ];
 
     // Define the Tailwind background gradient classes for each text
