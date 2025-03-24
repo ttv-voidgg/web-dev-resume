@@ -56,10 +56,12 @@ const App = () => {
         duration: 0,     // Instant change of text
         opacity: 1, 
         text: { value: "" }, // Change the text immediately
+        delimiter:""
       })    
       .to(roles, {
         duration: 1,  // Adjust typing speed based on text length 
         text: { value: text }, // Change the text immediately
+        delimiter:""
       })       
       .to(roles, {
         duration: .5,     // Fade in duration for new text
