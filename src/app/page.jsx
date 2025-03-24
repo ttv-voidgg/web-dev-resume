@@ -1,10 +1,16 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  XIcon,
+} from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/cklph_logo.png'
 import logoFacebook from '@/images/logos/site-logo-new-2016.png'
 import logoPlanetaria from '@/images/logos/Constant-C-Technology-Group.png'
@@ -19,7 +25,11 @@ import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-import HomeContent from './homecontent/page.jsx'; // adjust the path accordingly
+import { gsap } from "gsap";
+import { Flip } from "gsap/Flip";
+
+
+gsap.registerPlugin(Flip);
 
 function MailIcon(props) {
   return (
@@ -259,17 +269,39 @@ function Photos() {
 }
 
 export default async function Home() {
-
   let articles = (await getAllArticles()).slice(0, 4)
 
   return (
     <>
       <Container className="mt-9">
-      <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-1">
-          <div className="flex flex-col gap-16">
-            <HomeContent />
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            Developer, Designer, Photographer, Network & Systems Admin.
+          </h1>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          I&apos;m Carlos—a Developer, Designer, Photographer, and Network & Systems Administrator based in Winnipeg.
+          </p>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          I specialize in building dynamic and efficient digital solutions, seamlessly blending development, 
+          design, and technology to craft exceptional user experiences. Photography is also a passion of mine, 
+          where I explore creativity beyond the digital realm, having received recognition for some of my work.
+          </p>          
+          <div className="mt-6 flex gap-6">
+            <SocialLink
+              href="https://www.instagram.com/kai._.0008/"
+              aria-label="Check my Photography on Instagram"
+              icon={InstagramIcon}
+            />
+            <SocialLink
+              href="https://github.com/ttv-voidgg"
+              aria-label="View My Silly Projects on GitHub"
+              icon={GitHubIcon}
+            />
+            <SocialLink
+              href="https://www.linkedin.com/in/juan-carlos-eejay-de-borja-80696651/"
+              aria-label="Connect with me on LinkedIn"
+              icon={LinkedInIcon}
+            />
           </div>
         </div>
       </Container>
