@@ -61,8 +61,8 @@ I've worked on numerous projects over the years, but these are the ones I'm most
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Talen AI
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-black sm:text-5xl dark:text-zinc-100">
+                Talent AI
               </h1>
               <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
                 <strong>Talent.AI</strong> helps applicants in Manitoba prepare for interviews with AI-powered simulations, offering personalized feedback and insights to boost performance and land the perfect job.
@@ -86,7 +86,7 @@ I've worked on numerous projects over the years, but these are the ones I'm most
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-black sm:text-5xl dark:text-zinc-100">
                 Zumi
               </h1>
               <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
@@ -108,7 +108,7 @@ I've worked on numerous projects over the years, but these are the ones I'm most
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-black sm:text-5xl dark:text-zinc-100">
                 Zpercent
               </h1>
               <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
@@ -130,7 +130,7 @@ I've worked on numerous projects over the years, but these are the ones I'm most
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-black sm:text-5xl dark:text-zinc-100">
                 AllCooks
               </h1>
               <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
