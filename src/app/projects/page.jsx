@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import talentai from '@/images/projects/talentai.png'
 import zumi from '@/images/projects/zumi.jpg'
 import zpercent from '@/images/projects/zpercent.png'
 import allcooks from '@/images/projects/allcooks-logo.png'
@@ -55,6 +56,31 @@ I've worked on numerous projects over the years, but these are the ones I'm most
           </svg>
           <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={0} />
         </svg>
+      </div>
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="lg:pr-4">
+            <div className="lg:max-w-lg">
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                Talen AI
+              </h1>
+              <p className="mt-6 text-xl/8 text-zinc-600 dark:text-zinc-400">
+                <strong>Talent.AI</strong> helps applicants in Manitoba prepare for interviews with AI-powered simulations, offering personalized feedback and insights to boost performance and land the perfect job.
+              </p>
+              <button className="rounded-md mt-5 bg-black px-3.5 py-3 text-base font-semibold text-white shadow-xs hover:bg-gray-700 focus-visible:outline-2 focus-visible:outline-offset-2">
+                <a className="" href="https://talent-ai-teal.vercel.app/" target="_blank">Sign up and Try it!</a>
+              </button>
+
+            </div>
+          </div>
+        </div>
+        <div className="sm:hidden lg:col-span-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-1 lg:gap-x-8 lg:px-8">
+          <Image
+              alt=""
+              src={talentai}
+              className="w-[55rem] max-w-52 rounded-xl sm:w-[57rem]"
+          />
+        </div>
       </div>
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
